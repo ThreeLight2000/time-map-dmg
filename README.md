@@ -1,6 +1,28 @@
-# DEMO (V1)
+# TimeMap.dmg — historical web portfolio
 
-[![Demo](https://i.imgur.com/t7xuFP1.png)](https://www.youtube.com/embed/EE_m0jAGuVw?si=QPYPn-oT5OfFWJzz)
+TimeMap.dmg is a personal portfolio website built with Next.js, not a disk image or downloadable desktop app. The source describes it as a way to map personal activities and work over time.
+
+- **Portfolio:** [time-map-dmg.vercel.app](https://time-map-dmg.vercel.app)
+- **Demo video:** [Watch the original demo](https://www.youtube.com/embed/EE_m0jAGuVw?si=QPYPn-oT5OfFWJzz)
+
+[![TimeMap.dmg demo](https://i.imgur.com/t7xuFP1.png)](https://www.youtube.com/embed/EE_m0jAGuVw?si=QPYPn-oT5OfFWJzz)
+- **Project description and stack:** [src/data/timemap-dmg.md](src/data/timemap-dmg.md)
+- **Activity page and API:** [activity page](src/app/%28info%29/activities/page.tsx) · [activities endpoint](src/app/api/v1/info/activities/route.ts)
+
+## Run locally
+
+This historical source uses Yarn (`yarn.lock`) and defines `dev` and `build` scripts in [`package.json`](package.json):
+
+```bash
+yarn install
+yarn dev
+# Optional production build
+yarn build
+```
+
+The audited source has not had a fresh dependency install or build verification. Local development may still read deployed data: [`src/constants/urls.ts`](src/constants/urls.ts) points `API_URL` at the Vercel API, and the [activities page](src/app/%28info%29/activities/page.tsx) requests data from that endpoint.
+
+The update log below records changes from December 2023 through January 2024. It is historical project context, not a current maintenance statement. The repository has no test script; available commands are listed in [package.json](package.json).
 
 ## TimeMap.dmg UPDATE
 
